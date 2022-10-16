@@ -23,6 +23,41 @@
   
 }
 
+#main {
+  background-color: #ffffff;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: right;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+#leftBox {
+  background-color: #ffffff23;
+  min-height: 20vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  align-items: right;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+#rightBox {
+  background-color: #ff000028;
+  min-height: 20vh;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  align-items: left;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
 .App-link {
   color: #61dafb;
 }
+
+

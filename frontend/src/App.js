@@ -2,10 +2,10 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { ButtonGroup, FormControlLabel } from '@material-ui/core';
+import { Box, ButtonGroup, FormControlLabel } from '@material-ui/core';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles, ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
+import { makeStyles, ThemeProvider, createTheme, StylesProvider, styled } from '@material-ui/core/styles'; //import for styles and themes
 import React from 'react';
 import { blue, orange, purple } from '@material-ui/core/colors';
 //import 'fontsource-roboto'; //importing fonts, this is a google font, so we need to import it from google
@@ -24,7 +24,7 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
       main: '#880e4f', //and then the values of the color that you want to change, with the weight of the color in the braces
     },
     secondary: {
-      main:blue[300], //secondary
+      main:'#d50000', //secondary
     }
   },
   typography: {
@@ -40,16 +40,47 @@ function App() {
     <ThemeProvider theme={theme}> //this is how you use the theme provider
     <div className="App">
       <header className="App-header">
-        <AppBar color="primary" style={{padding: '5px'}}>
+        <AppBar color="primary" style={{padding: '2px'}}>
           <Toolbar>
             <IconButton color='white'>
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 26}}>
+            <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>
               BLOOD BANK MANAGEMENT SYSTEM
             </Typography>
           </Toolbar>
         </AppBar>
+        {/*this is the main stuff that we need*/}
+        <div id='main' className='main'>
+          <Box component="container" id='leftBox' sx={{
+              width: '50%',
+              height: 1200,
+              backgroundColor: 'primary',
+              // '&:hover': {
+              // backgroundColor: 'primary',
+              // },
+            }}>
+            <Typography variant="h2" style={{fontFamily: 'Calibri', color: 'white', fontSize: 36, marginTop: 450, marginLeft: 50}}>
+              New Here? Sign up today! 
+            </Typography>
+          </Box>
+          <Box id='rightBox' sx={{
+              width: '50%',
+              height: 1200,
+              backgroundColor: 'primary',
+              // '&:hover': {
+              // backgroundColor: 'primary',
+              // },
+            }}>
+
+          </Box>
+        </div>
+        <div id='backgroundImage' style={{backgroundImage: 'url("")'}}>
+
+        </div>
+        <ButtonGroup variant="contained" color="secondary">
+            <Button startIcon={<SaveIcon />} size="large" style={{fontSize: 20}}>Save</Button>
+        </ButtonGroup>
       </header>
     </div>
     </ThemeProvider>
