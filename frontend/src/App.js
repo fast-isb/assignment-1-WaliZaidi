@@ -1,6 +1,6 @@
 import './App.css';
 import Button from '@material-ui/core/Button';
-import { Box, ButtonGroup, Link } from '@material-ui/core';
+import { Box, ButtonGroup} from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
 import React from 'react';
 import Typography from '@material-ui/core/Typography'; //this is required for the better moving and typography of the page
@@ -10,8 +10,9 @@ import IconButton from '@material-ui/core/IconButton'; //this for a button with 
 import MenuIcon from '@material-ui/icons/Menu'; //and this is the actual icon that we need
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
+  Routes,
+  Link
 } from "react-router-dom"; //everything that we need for routing (have to check if material ui has routing support) 
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
@@ -30,6 +31,22 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
     }
   }
 })
+
+const LoginPage = () => {
+  return (
+    <div>
+      <h1>Login Page</h1>
+    </div>
+  )
+}
+
+const SignUp = () => {
+  return (
+    <div>
+      <h1>Sign Up Page</h1>
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -74,17 +91,9 @@ function App() {
               </ButtonGroup>
             </Box>
           </div>
-          <div id='backgroundImage' style={{backgroundImage: 'url("")'}}>
+          {/* <div id='backgroundImage' style={{backgroundImage: 'url("")'}}>
 
-          </div>
-          <div>
-            <Link to="/LoginPage" className="Login">
-              
-            </Link>
-            <Link to="/SignUp" className="SignUp">
-              
-            </Link>
-          </div>
+          </div> */}
         </header>
       </div>
       </ThemeProvider>
