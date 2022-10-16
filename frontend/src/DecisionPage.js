@@ -7,6 +7,12 @@ import MenuIcon from '@material-ui/icons/Menu'; //and this is the actual icon th
 import Button from '@material-ui/core/Button';
 import { Box, ButtonGroup} from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Link,
+  } from "react-router-dom";
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
     palette: { //is how colors are changed
@@ -25,19 +31,21 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
     }
   });
 
-const DecisionPage = () => {
+const DecisionPage = () => { //so, make any function that you want to render into a const, cuz we passin classes out here from now on boi
     return (
     <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
       <div className="App">
         <header className="App-header">
           <AppBar color="primary" style={{padding: '2px'}}>
             <Toolbar>
-              <IconButton color='white'>
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>
-                BLOOD BANK MANAGEMENT SYSTEM
-              </Typography>
+                <IconButton color='white'>
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>
+                    BLOOD BANK MANAGEMENT SYSTEM
+                </Typography>
+                <Button id="signUpButton" variant="outlined" size="large" style={{alignItems: 'center', color:'white', marginLeft: 850}} href="/signup"> Sign Up </Button>
+                <Button id="loginButton" variant="outlined" size="large" style={{alignItems: 'center', color:'white', marginLeft: 25}} href="/signin"> Sign In </Button>
             </Toolbar>
           </AppBar>
           {/*this is the main stuff that we need*/}
@@ -51,7 +59,7 @@ const DecisionPage = () => {
                 New Here? Sign up today! 
               </Typography>
               <ButtonGroup variant="contained" color="secondary.light" style={{fontSize: 20, marginTop: 120}} > {/*this is the button group, which is the sign up button*/}
-                <Button size="large" style={{fontSize: 20}}>Sign up</Button>
+                <Button size="large" style={{fontSize: 20}} href="/signup">Sign up</Button>
               </ButtonGroup>
             </Box>
             <Box id='rightBox' sx={{
@@ -63,7 +71,7 @@ const DecisionPage = () => {
                 Already a member?  
               </Typography>
               <ButtonGroup variant="contained" color="primary.light" style={{fontSize: 20, marginTop: 120}} >
-                <Button size="large" style={{fontSize: 20}}>Login now</Button>
+                <Button size="large" style={{fontSize: 20}} href="/signin">Sign In</Button>
               </ButtonGroup>
             </Box>
           </div>
@@ -76,4 +84,4 @@ const DecisionPage = () => {
     );
 }
 
-export default DecisionPage;
+export default DecisionPage; //remember the first letter should be capital, and then you can import it into the app.js file
