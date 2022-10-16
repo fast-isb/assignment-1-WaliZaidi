@@ -2,7 +2,7 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { Box, ButtonGroup, FormControlLabel } from '@material-ui/core';
+import { Box, ButtonGroup, FormControlLabel, Link } from '@material-ui/core';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles, ThemeProvider, createTheme, StylesProvider, styled } from '@material-ui/core/styles'; //import for styles and themes
@@ -21,7 +21,7 @@ import MenuIcon from '@material-ui/icons/Menu'; //and this is the actual icon th
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
   palette: { //is how colors are changed
     primary: { //the changing of the primary color in this 
-      main: '#880e4f', //and then the values of the color that you want to change, with the weight of the color in the braces
+      main: '#00695c', //and then the values of the color that you want to change, with the weight of the color in the braces
     },
     secondary: {
       main:'#d50000', //secondary
@@ -56,31 +56,38 @@ function App() {
               width: '50%',
               height: 1200,
               backgroundColor: 'primary',
-              // '&:hover': {
-              // backgroundColor: 'primary',
-              // },
             }}>
-            <Typography variant="h2" style={{fontFamily: 'Calibri', color: 'white', fontSize: 36, marginTop: 450, marginLeft: 50}}>
+            <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: 450, marginLeft: 0}}>
               New Here? Sign up today! 
             </Typography>
+            <ButtonGroup variant="contained" color="secondary.light" style={{fontSize: 20, marginTop: 120}} >
+              <Button size="large" style={{fontSize: 20}}>Sign up</Button>
+            </ButtonGroup>
           </Box>
           <Box id='rightBox' sx={{
               width: '50%',
               height: 1200,
               backgroundColor: 'primary',
-              // '&:hover': {
-              // backgroundColor: 'primary',
-              // },
             }}>
-
+            <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: 450, marginLeft: 0}}>
+              Already a member?  
+            </Typography>
+            <ButtonGroup variant="contained" color="primary.light" style={{fontSize: 20, marginTop: 120}} >
+              <Button size="large" style={{fontSize: 20}}>Login now</Button>
+            </ButtonGroup>
           </Box>
         </div>
         <div id='backgroundImage' style={{backgroundImage: 'url("")'}}>
 
         </div>
-        <ButtonGroup variant="contained" color="secondary">
-            <Button startIcon={<SaveIcon />} size="large" style={{fontSize: 20}}>Save</Button>
-        </ButtonGroup>
+        <div>
+          <Link to="/LoginPage" className="Login">
+            Login
+          </Link>
+          <Link to="/SignUp" className="SignUp">
+            Sign Up
+          </Link>
+        </div>
       </header>
     </div>
     </ThemeProvider>

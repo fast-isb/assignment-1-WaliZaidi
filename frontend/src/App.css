@@ -35,8 +35,9 @@
 }
 
 #leftBox {
-  background-color: #ffffff23;
-  min-height: 20vh;
+  background-color: #ff000047;
+  min-height: 100vh;
+  min-width: 49.5vw;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -46,8 +47,9 @@
 }
 
 #rightBox {
-  background-color: #ff000028;
-  min-height: 20vh;
+  background-color: #3300ff4b;
+  min-height: 100vh;
+  min-width: 49.5vw;
   position: fixed;
   right: 0px;
   top: 0px;
