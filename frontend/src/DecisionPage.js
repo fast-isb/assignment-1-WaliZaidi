@@ -7,6 +7,7 @@ import MenuIcon from '@material-ui/icons/Menu'; //and this is the actual icon th
 import Button from '@material-ui/core/Button';
 import { Box, ButtonGroup} from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
+import navBar from "./navBar";
 import {
     BrowserRouter as Router,
     Route,
@@ -36,7 +37,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
     <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
       <div className="App">
         <header className="App-header">
-          <AppBar color="primary" style={{padding: '2px'}}>
+          {/* <AppBar color="primary" style={{padding: '2px'}}>
             <Toolbar>
                 <IconButton color='white'>
                     <MenuIcon />
@@ -44,13 +45,15 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>
                     BLOOD BANK MANAGEMENT SYSTEM
                 </Typography>
-                <Toolbar style={{marginLeft: 1150}}>
-                  <Button id="signUpButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white' /*marginLeft: 1100*/}} href="/signup"> Sign Up </Button>
+                <Toolbar style={{marginLeft: 1000}}>
+                  <Button id="HomeButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white'}} href="/"> Home </Button>
+                  <Button id="signUpButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white', marginLeft: 20}} href="/signup"> Sign Up </Button>
                   <Button id="signInButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white', marginLeft: 20}} href="/signin"> Sign In </Button>
                 </Toolbar>
             </Toolbar>
-          </AppBar>
+          </AppBar> */}
           {/*this is the main stuff that we need*/}
+          <navBar />
           <div id='main' className='main'>
             <Box component="container" id='leftBox' sx={{ 
                 width: '50%',
@@ -70,7 +73,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 backgroundColor: 'primary',
               }}>
                 <div className="signinPage">
-                  
+
                 </div>
               <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: 450, marginLeft: 0}}>
                 Already a member?  
