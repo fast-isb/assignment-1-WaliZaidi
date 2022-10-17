@@ -17,7 +17,7 @@ import {
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
     palette: { //is how colors are changed
       primary: { //the changing of the primary color in this 
-        main: '#00695c', //and then the values of the color that you want to change, with the weight of the color in the braces
+        main: '#37474f', //and then the values of the color that you want to change, with the weight of the color in the braces
       },
       secondary: {
         main:'#d50000', //secondary
@@ -44,8 +44,10 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>
                     BLOOD BANK MANAGEMENT SYSTEM
                 </Typography>
-                <Button id="signUpButton" variant="outlined" size="large" style={{alignItems: 'center', color:'white', marginLeft: 850}} href="/signup"> Sign Up </Button>
-                <Button id="loginButton" variant="outlined" size="large" style={{alignItems: 'center', color:'white', marginLeft: 25}} href="/signin"> Sign In </Button>
+                <Toolbar style={{marginLeft: 1150}}>
+                  <Button id="signUpButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white' /*marginLeft: 1100*/}} href="/signup"> Sign Up </Button>
+                  <Button id="signInButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white', marginLeft: 20}} href="/signin"> Sign In </Button>
+                </Toolbar>
             </Toolbar>
           </AppBar>
           {/*this is the main stuff that we need*/}
@@ -67,6 +69,9 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 height: 1200,
                 backgroundColor: 'primary',
               }}>
+                <div className="signinPage">
+                  
+                </div>
               <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: 450, marginLeft: 0}}>
                 Already a member?  
               </Typography>
