@@ -7,7 +7,6 @@ import MenuIcon from '@material-ui/icons/Menu'; //and this is the actual icon th
 import Button from '@material-ui/core/Button';
 import { Box, ButtonGroup} from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
-import navBar from "./navBar";
 import {
     BrowserRouter as Router,
     Route,
@@ -37,7 +36,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
     <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
       <div className="App">
         <header className="App-header">
-          {/* <AppBar color="primary" style={{padding: '2px'}}>
+          <AppBar color="primary" style={{padding: '2px'}}>
             <Toolbar>
                 <IconButton color='white'>
                     <MenuIcon />
@@ -51,9 +50,8 @@ const DecisionPage = () => { //so, make any function that you want to render int
                   <Button id="signInButton" variant="outlined" size="large" style={{alignItems: 'right', color:'white', marginLeft: 20}} href="/signin"> Sign In </Button>
                 </Toolbar>
             </Toolbar>
-          </AppBar> */}
+          </AppBar>
           {/*this is the main stuff that we need*/}
-          <navBar />
           <div id='main' className='main'>
             <Box component="container" id='leftBox' sx={{ 
                 width: '50%',
