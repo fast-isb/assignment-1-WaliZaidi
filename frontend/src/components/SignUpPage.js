@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
 import NavBar from "./navBar";
+import { TextField, Typography } from "@material-ui/core";
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
     palette: { //is how colors are changed
@@ -18,19 +19,18 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
       }
     }
   });
+
+
 function SignUp() {
     return (
         <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
             <div className="App">
                 <header className="App-header">
+                
+                    <Typography variant="h2" component="h2" style={{marginBottom: '45%'}}>Please enter your details below:</Typography>
+                
                 {/*this is the main stuff that we need*/}
-                <NavBar />
-                <div id='main' className='main'>
-            
-                </div>
-                {/* <div id='backgroundImage' style={{backgroundImage: 'url("")'}}>
-
-          </div> */}
+                    <NavBar />  
                 </header>
             </div>
         </ThemeProvider>

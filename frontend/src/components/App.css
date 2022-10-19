@@ -22,6 +22,14 @@
   color: white;
 }
 
+#wordBox {
+  background-image: linear-gradient(120deg, #BF3A30 , #864BA2);
+  background-clip: content-box;
+  background-position-y: top;
+  
+}
+
+
 #main {
   background-color: #ffffff;
   min-height: 20vh;
@@ -34,7 +42,7 @@
 }
 
 #leftBox {
-  background-color: #ff000047;
+  background-color: #ff000039;
   min-height: 100vh;
   min-width: 50vw;
   position: fixed;
@@ -46,7 +54,7 @@
 }
 
 #rightBox {
-  background-color: #3300ff4b;
+  background-color: #3300ff3a;
   min-height: 100vh;
   min-width: 50vw;
   position: fixed;
