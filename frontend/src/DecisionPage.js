@@ -38,7 +38,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
           <Typography className="welcomeHead" color="primary.light" component="h6" style={{fontFamily: 'Rockwell', fontSize: 46, marginLeft: 0, zIndex: 4, marginTop: '-550px'}}>
                 Welcome to Blood Bank Management System!
           </Typography> 
-          <div style={{backgroundImage: `url(${loginLogo})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '100vh', width: '100vw', position: 'absolute', zIndex: 1, opacity: 0.09}}></div>
+          <div style={{backgroundImage: `url(${loginLogo})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '100vh', width: '100vw', position: 'absolute', zIndex: 0, opacity: 0.09}}></div>
           <NavBar />
 
           {/*this is the main stuff that we need*/}
