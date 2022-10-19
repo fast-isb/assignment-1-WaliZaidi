@@ -5,9 +5,9 @@ import {
   Route,
   Routes,
 } from "react-router-dom"; //everything that we need for routing (have to check if material ui has routing support) 
-import SignUp from './SignUpPage';
-import SignInPage from './SignInPage';
-import DecisionPage from './DecisionPage';
+import SignUp from './components/SignUpPage';
+import SignInPage from './components/SignInPage';
+import DecisionPage from './components/DecisionPage';
 
 
 function App() {
