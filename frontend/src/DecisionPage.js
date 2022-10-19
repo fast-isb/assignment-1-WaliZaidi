@@ -35,11 +35,14 @@ const DecisionPage = () => { //so, make any function that you want to render int
       <div className="App">
         <header className="App-header">
           {/*this is the main stuff that we need*/}
-          <Typography className="welcomeHead" color="primary.light" component="h6" style={{fontFamily: 'Rockwell', fontSize: 46, marginLeft: 0, zIndex: 5, marginTop: '-550px'}}>
+          <Typography className="welcomeHead" color="primary.light" component="h6" style={{fontFamily: 'Rockwell', fontSize: 46, marginLeft: 0, zIndex: 4, marginTop: '-550px'}}>
                 Welcome to Blood Bank Management System!
           </Typography> 
-          <div style={{backgroundImage: `url(${loginLogo})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '100vh', width: '100vw', position: 'absolute', zIndex: 1, opacity: 0.09}}></div>
+          <div style={{backgroundImage: `url(${loginLogo})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '100vh', width: '100vw', position: 'absolute', zIndex: 0, opacity: 0.09}}></div>
           <NavBar />
+
+          {/*this is the main stuff that we need*/}
+
           <div id='main' className='main'>
             <Box component="container" id='leftBox' sx={{ 
                 width: '50%',
@@ -50,7 +53,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
               <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: '80%', marginLeft: 0}}> {/*need to move these a bit down and add some images above them, blank screens are blank*/}
                 New Here? Sign up today! 
               </Typography>
-              <ButtonGroup variant="contained" color="secondary.light" style={{fontSize: 20, marginTop: 120}} > {/*this is the button group, which is the sign up button*/}
+              <ButtonGroup variant="contained" color="secondary.light" style={{fontSize: 20, marginTop: 120, zIndex: 4}} > {/*this is the button group, which is the sign up button*/}
                 <Button size="large" style={{fontSize: 20}} href="/signup">Sign up</Button>
               </ButtonGroup>
             </Box>
@@ -66,7 +69,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
               <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: '80%', marginLeft: 0}}>
                 Already a member?  
               </Typography>
-              <ButtonGroup variant="contained" color="primary.light" style={{fontSize: 20, marginTop: 120}} >
+              <ButtonGroup variant="contained" color="primary.light" style={{fontSize: 20, marginTop: 120, zIndex: 4}} >
                 <Button size="large" style={{fontSize: 20}} href="/signin">Sign In</Button>
               </ButtonGroup>
             </Box>
