@@ -29,7 +29,7 @@ const NavBar = () => {
         <div>
             <AppBar color="primary" style={{padding: '2px'}}>
                 <Toolbar>
-                    <IconButton color='white'>
+                    <IconButton color='primary'>
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>

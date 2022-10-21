@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
 import NavBar from "./navBar";
-import { Box, Button, TextField, Typography } from "@material-ui/core";
+import { Box, Button, ButtonGroup, TextField, Typography } from "@material-ui/core";
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
     palette: { //is how colors are changed
@@ -9,7 +9,7 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
         main: '#37474f', //and then the values of the color that you want to change, with the weight of the color in the braces
       },
       secondary: {
-        main:'#d50000', //secondary
+        main:'#FFA630', //secondary
       }
     },
     typography: {
@@ -45,7 +45,10 @@ function SignUp() {
                         <TextField fullWidth id="textField4"  variant="filled" />
                         <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Domicile</Typography>
                         <TextField fullWidth id="textField4"  variant="filled" />
-                        <Button variant="contained" color="primary" style={{marginTop: '3'}}>Submit</Button>
+                        <ButtonGroup variant="text" color="primary" aria-label="contained primary button group" style={{marginTop: '15px'}}>
+                          <Button color="secondary" href="/">Go Back</Button>
+                          <Button color="secondary" style={{marginTop: '3'}}>Submit</Button>
+                        </ButtonGroup>
                       </Box>
                     </Box>
                     <NavBar />  
