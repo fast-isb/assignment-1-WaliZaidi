@@ -47,3 +47,5 @@ const NavBar = () => {
 }
 
 export default NavBar;
+
+//works as of now
