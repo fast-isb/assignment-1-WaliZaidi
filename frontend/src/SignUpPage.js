@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
 import NavBar from "./navBar";
-import { TextField, Typography } from "@material-ui/core";
+import { Box, Button, TextField, Typography } from "@material-ui/core";
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
     palette: { //is how colors are changed
@@ -26,10 +26,28 @@ function SignUp() {
         <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
             <div className="App">
                 <header className="App-header">
-                
-                    <Typography variant="h2" component="h2" style={{marginBottom: '45%'}}>Please enter your details below:</Typography>
-                
-                {/*this is the main stuff that we need*/}
+                    <Box component='grid' noValidate autoComplete="off" sx={{width: 400, flexDirection:'column', textAlign: 'left', justifyContent: 'left' }}>
+                      <Typography variant="h2" component="h2" style={{marginBottom: '15px'}}>Please enter your details below:</Typography>
+                      <Box component='grid' padding='150' sx={{width: 400, flexDirection:'column', maxWidth: '100%'}}>
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>First Name</Typography>
+                        <TextField fullWidth id="textField1" variant="filled" sx={{input: {color: 'white'}}}/>
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Last Name</Typography>
+                        <TextField fullWidth id="textField2" variant="filled" />
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>UserName</Typography>
+                        <TextField fullWidth id="textField4"  variant="filled" />
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Password</Typography>
+                        <TextField fullWidth id="textField4" type="password" variant="filled" />
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Email</Typography>
+                        <TextField fullWidth id="textField3"  variant="filled" />
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Phone Number</Typography>
+                        <TextField fullWidth id="textField4"  variant="filled" />
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Address</Typography>
+                        <TextField fullWidth id="textField4"  variant="filled" />
+                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Domicile</Typography>
+                        <TextField fullWidth id="textField4"  variant="filled" />
+                        <Button variant="contained" color="primary" style={{marginTop: '3'}}>Submit</Button>
+                      </Box>
+                    </Box>
                     <NavBar />  
                 </header>
             </div>
