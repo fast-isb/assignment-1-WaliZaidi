@@ -77,7 +77,7 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 Already a member?  
               </Typography>
               <ButtonGroup variant="contained" color="primary.light" style={{fontSize: 20, marginTop: 120}} >
-                <Button size="large" style={{fontSize: 20}} href="/signin">Sign In</Button>
+                <Button className="signinButton" size="large" style={{fontSize: 20}} href="/signin">Sign In</Button>
               </ButtonGroup>
             </Box>
           </div>
