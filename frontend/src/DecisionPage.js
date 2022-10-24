@@ -63,9 +63,6 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 backgroundColor: 'primary',
                 zIndex: 3,
               }}>
-                <div className="signinPage">
-
-                </div>
               <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: '80%', marginLeft: 0}}>
                 Already a member?  
               </Typography>

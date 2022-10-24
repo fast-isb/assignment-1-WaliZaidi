@@ -7,6 +7,7 @@ import NavBar from "./navBar";
 import Button from "@material-ui/core/Button";
 import Link from "react-router-dom";
 
+
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
     palette: { //is how colors are changed
       primary: { //the changing of the primary color in this 
@@ -81,7 +82,7 @@ function SignInPage() {
               <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
                 <ButtonGroup size="large" variant="text" color="secondary" aria-label="contained primary button group" style={{marginBottom: '15px'}}>
                   <Button href="/">Go Back</Button>
-                  <Button>Sign In</Button>
+                  <Button href="/main">Sign In</Button>
                 </ButtonGroup>
               </div>
             </Box>
