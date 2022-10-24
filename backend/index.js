@@ -16,7 +16,21 @@ import router from './routes/users.js';
 // const bodyParser = require('body-parser')
 
 const app = express()
-const port = 3001
+const port = process.env.PORT || 8000;
+
+const uri = process.env.uri;
+mongoose.connect(uri, {useNewUrlParser:true});
+
+const connection = mongoose.connection;
+connection.once() //edit this once you get home
+
+
+const admin = require('./routes/admin');
+
+app.use('/admin', admin);
+
+app.use(cors());
+app.use(express.json);
 
 app.use(bodyParser.json())
 // Adding a Router
