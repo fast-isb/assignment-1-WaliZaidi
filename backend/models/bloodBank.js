@@ -24,5 +24,5 @@ const bloodBankSchema = new Schema({ //define schema in this part for the databa
 });
 
 const bloodBB = mongoose.model('BloodBank', bloodBankSchema);
-
-module.exports = bloodBB;
+const bloodBBOrder = mongoose.model('BloodBank Order', bloodBankSchema);
+module.exports = bloodBB, bloodBBOrder;
