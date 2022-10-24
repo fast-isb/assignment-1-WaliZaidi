@@ -57,7 +57,7 @@ function SignInPage() {
           <NavBar />
           <ThemeProvider theme={innerTheme}>
             <Box component="container" display="flex" flexDirection="column" className="CenterBox" style={{
-                backgroundColor: '#871f4596',
+                backgroundColor: '#f0544f6a',
                 minHeight: '80vh',
                 width: '50vw',
                 position: 'absolute',
