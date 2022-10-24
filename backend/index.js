@@ -6,7 +6,9 @@
 //const express = require('express')
 import express from 'express'; // <-- Module Style import
 import bodyParser from 'body-parser';
-
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
 // Importing user route
 import router from './routes/users.js';
 // const router = require('router')
