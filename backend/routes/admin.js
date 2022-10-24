@@ -10,3 +10,4 @@ router.route('/add').post((req,res) => {
     .then(() => res.json('Movie Added!')) //reply as successful
     .catch(err => res.status(400).json('Error:' + err)); //reply if failure
 })
+
