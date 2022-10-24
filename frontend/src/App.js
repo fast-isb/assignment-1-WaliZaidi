@@ -8,6 +8,7 @@ import {
 import SignUp from './SignUpPage';
 import SignInPage from './SignInPage';
 import DecisionPage from './DecisionPage';
+import SubmissionPage from './SubmissionPage';
 
 
 function App() {
@@ -18,17 +19,8 @@ function App() {
         <Route exact path='/' element={<DecisionPage/>}/> {/*Use the element tag, the component one expired, and we also have to call the thing we passed as a component*/}
         <Route exact path='/signup' element={<SignUp/>}></Route>
         <Route exact path='/signin' element={<SignInPage/>}></Route>
+        <Route exact path='/main' element={<SubmissionPage/>}></Route>
       </Routes>
-      {/* <AppBar color="primary" style={{padding: '2px'}}>
-            <Toolbar>
-              <IconButton color='white'>
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" style={{fontFamily: '', color: 'white', fontSize: 20}}>
-                BLOOD BANK MANAGEMENT SYSTEM
-              </Typography>
-            </Toolbar>
-          </AppBar> */}
     </div>
   );
 }

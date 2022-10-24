@@ -63,14 +63,11 @@ const DecisionPage = () => { //so, make any function that you want to render int
                 backgroundColor: 'primary',
                 zIndex: 3,
               }}>
-                <div className="signinPage">
-
-                </div>
               <Typography variant="h2" style={{fontFamily: 'Rockwell', color: 'white', fontSize: 36, marginTop: '80%', marginLeft: 0}}>
                 Already a member?  
               </Typography>
               <ButtonGroup variant="contained" color="primary.light" style={{fontSize: 20, marginTop: 120, zIndex: 4}} >
-                <Button size="large" style={{fontSize: 20}} href="/signin">Sign In</Button>
+                <Button className="signinButton" size="large" style={{fontSize: 20}} href="/signin">Sign In</Button>
               </ButtonGroup>
             </Box>
           </div>
