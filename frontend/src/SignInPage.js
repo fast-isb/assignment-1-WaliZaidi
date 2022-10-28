@@ -59,8 +59,7 @@ class SignInPage extends React.Component {
         TheMessage: "",
       }
       this.sendInfo = this.sendInfo.bind(this);
-
-    };
+  };
   
   
   sendInfo(event)
@@ -68,6 +67,7 @@ class SignInPage extends React.Component {
 
     console.log("Sending info");
     console.log(this.state.username);
+    console.log(this.state.password);
     event.preventDefault()
     const appliedUser = {
       username: this.state.username,
@@ -76,7 +76,7 @@ class SignInPage extends React.Component {
     axios.post('http://localhost:8000/app/request', appliedUser)
     .then(res => console.log(res.data));
 
-    window.location = "/main";
+    // window.location = "/main";
 
   }
 
