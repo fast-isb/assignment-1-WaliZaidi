@@ -5,8 +5,8 @@ const router = express.Router()
 router.post('/request', (req, res) => {
 
     const generatedAccount = new AccountSchema({
-        username: String,
-        password: String,
+        username: req.body.username,
+        password: req.body.password
     })
 
     generatedAccount.save()
