@@ -50,14 +50,12 @@ const SubmissionPage = () => {
 
                     <Grid>
                         <Grid>
-                            <Button>Hello</Button>
-                            <Button>Hello 2</Button>
-                        </Grid>
-                        <Grid>
-                            <Button size="large" sx={{fontSize: 56}} >Hello</Button>
-                            <Button>Hello2</Button>
+                            <Button color="secondary" href="/userUpdate">Update User Information</Button>
                         </Grid>
                     </Grid>
+                    <ButtonGroup variant="text" color="primary" aria-label="contained primary button group" style={{marginTop: '15px'}}>
+                        <Button color="secondary" href="/">Go Back</Button>
+                    </ButtonGroup>
                 </header>
             </div>
         </ThemeProvider>

@@ -76,7 +76,7 @@ class SignInPage extends React.Component {
     axios.post('http://localhost:8000/app/request', appliedUser)
     .then(res => console.log(res.data));
 
-    // window.location = "/main";
+    window.location = "/main";
 
   }
 
@@ -113,7 +113,7 @@ class SignInPage extends React.Component {
                 <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
                   <ButtonGroup size="large" variant="text" color="secondary" aria-label="contained primary button group" style={{marginBottom: '15px'}}>
                     <Button href="/">Go Back</Button>
-                    <Button onClick={this.sendInfo}>Sign In</Button>
+                    <Button href="/main" onClick={this.sendInfo}>Sign In</Button>
                   </ButtonGroup>
                 </div>
               </Box>

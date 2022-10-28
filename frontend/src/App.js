@@ -9,6 +9,7 @@ import SignUp from './SignUpPage';
 import SignInPage from './SignInPage';
 import DecisionPage from './DecisionPage';
 import SubmissionPage from './SubmissionPage';
+import UpdatePersonalInfo from './updatePersonalInfo';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/signup' element={<SignUp/>}></Route>
         <Route exact path='/signin' element={<SignInPage/>}></Route>
         <Route exact path='/main' element={<SubmissionPage/>}></Route>
+        <Route exact path='/userUpdate' element={<UpdatePersonalInfo/>}></Route>
       </Routes>
     </div>
   );
