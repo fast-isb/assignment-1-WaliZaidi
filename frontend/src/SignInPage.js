@@ -5,7 +5,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import 
 import TextField from "@material-ui/core/TextField";
 import NavBar from "./navBar";
 import Button from "@material-ui/core/Button";
-import Link from "react-router-dom";
+import axios from 'axios';
 
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
@@ -49,48 +49,80 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
     },
   });
 
-function SignInPage() {
+class SignInPage extends React.Component {
+  
+  constructor() { 
+    super() //this is how you call the constructor
+      this.state = {
+        username: "walizaidi34@gmail.com",
+        password: "uwudaddy",
+        TheMessage: "",
+      }
+      this.sendInfo = this.sendInfo.bind(this);
+
+    };
+  
+  
+  sendInfo(event)
+  {
+
+    console.log("Sending info");
+    console.log(this.state.username);
+    event.preventDefault()
+    const appliedUser = {
+      username: this.state.username,
+      password: this.state.password,
+    }
+    axios.post('http://localhost:8000/app/request', appliedUser)
+    .then(res => console.log(res.data));
+
+    window.location = "/main";
+
+  }
+
+  render() {
     return (
-    <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
-      <div className="App">
-        <header className="App-header">
-          {/*this is the main stuff that we need*/}
-          <NavBar />
-          <ThemeProvider theme={innerTheme}>
-            <Box component="container" display="flex" flexDirection="column" className="CenterBox" style={{
-                backgroundColor: '#f0544f6a',
-                minHeight: '80vh',
-                width: '50vw',
-                position: 'absolute',
-                right: '25%',
-                top: '140px',
-                alignItems: 'justify',
-                color: 'secondary.main',
-            }}>
-              
-              <div style={{marginTop:60}}>
-                <Typography variant="h2" component="h2" style={{marginBottom: '15px'}}>Welcome Back. Sign in!</Typography>
-              </div>
-              <div style={{marginTop:100, direction: 'flex', flexDirection: 'column'}}>
-                <Typography variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Email</Typography>
-                <TextField id="outlined-basic" color="secondary" label="Email" variant="outlined" style={{marginBottom: '15px'}} />
-              </div>
-              <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
-                <Typography variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Password</Typography>
-                <TextField id="outlined" color="secondary" label="Password" type="password" variant="outlined" style={{marginBottom: '15px'}} />
-              </div>
-              <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
-                <ButtonGroup size="large" variant="text" color="secondary" aria-label="contained primary button group" style={{marginBottom: '15px'}}>
-                  <Button href="/">Go Back</Button>
-                  <Button href="/main">Sign In</Button>
-                </ButtonGroup>
-              </div>
-            </Box>
-          </ThemeProvider>
-        </header>
-      </div>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
+        <div className="App">
+          <header className="App-header">
+            {/*this is the main stuff that we need*/}
+            <NavBar />
+            <ThemeProvider theme={innerTheme}>
+              <Box component="container" display="flex" flexDirection="column" className="CenterBox" style={{
+                  backgroundColor: '#f0544f6a',
+                  minHeight: '80vh',
+                  width: '50vw',
+                  position: 'absolute',
+                  right: '25%',
+                  top: '140px',
+                  alignItems: 'justify',
+                  color: 'secondary.main',
+              }}>
+                
+                <div style={{marginTop:60}}>
+                  <Typography variant="h2" component="h2" style={{marginBottom: '15px'}}>Welcome Back. Sign in!</Typography>
+                </div>
+                <div style={{marginTop:100, direction: 'flex', flexDirection: 'column'}}>
+                  <Typography variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Email</Typography>
+                  <TextField id="outlined-basic" color="secondary" label="Email" variant="outlined" style={{marginBottom: '15px'}} />
+                </div>
+                <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
+                  <Typography variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Password</Typography>
+                  <TextField id="outlined" color="secondary" label="Password" type="password" variant="outlined" style={{marginBottom: '15px'}} />
+                </div>
+                <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
+                  <ButtonGroup size="large" variant="text" color="secondary" aria-label="contained primary button group" style={{marginBottom: '15px'}}>
+                    <Button href="/">Go Back</Button>
+                    <Button onClick={this.sendInfo}>Sign In</Button>
+                  </ButtonGroup>
+                </div>
+              </Box>
+            </ThemeProvider>
+          </header>
+        </div>
+      </ThemeProvider>
     );
+  }
 }
 
 export default SignInPage;
