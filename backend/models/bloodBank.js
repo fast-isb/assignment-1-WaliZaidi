@@ -1,5 +1,3 @@
-import mongoose from 'mongoose';
-
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
@@ -15,9 +13,6 @@ const bloodBankSchema = new Schema({ //define schema in this part for the databa
         type: Schema.Types.ObjectId,
         ref: 'Movie',
     },
-
-    
-
 },
 {
     timestamps: true,

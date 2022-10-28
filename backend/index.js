@@ -3,38 +3,28 @@
  * Modify the code according to your own needs and requirements
  */
 
-//const express = require('express')
-import express from 'express'; // <-- Module Style import
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import dotenv from 'dotenv';
+ const express = require('express');
+ const mongoose = require('mongoose');
+ const dotenv = require('dotenv');
+ const cors = require('cors');
 // Importing user route
-import router from './routes/users.js';
+const router = require('./routes/userInfoRoute.js');
 // const router = require('router')
 
 // const bodyParser = require('body-parser')
 
+//all the const additions 
+
+dotenv.config()
+
+mongoose.connect(process.env.connectionString, () => console.log("Database is connected"))
+// admin = require("");
 const app = express()
-const port = process.env.PORT || 8000;
-
-const uri = process.env.uri;
-mongoose.connect(uri, {useNewUrlParser:true});
-
-const connection = mongoose.connection;
-connection.once() //edit this once you get home
-
-
-const admin = require('./routes/admin');
-
-app.use('/admin', admin);
 
 app.use(cors());
 app.use(express.json);
-
-app.use(bodyParser.json())
 // Adding a Router
-app.use('/users', router);
+// app.use('/app', router);
 
 app.get('/', (req, res) => {
     res.send('Hello Universe!')
@@ -49,6 +39,6 @@ app.post('/', (req, res) => {
     res.send('Posting a Request')
 })
 
-app.listen(port, () => {
+app.listen(8000, () => {
     console.log(`Example app listening on port ${port}`)
 })
