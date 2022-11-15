@@ -24,10 +24,10 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
 function SignUp() {
     return (
         <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
-            <div className="App">
+            <div data-testid="comp" className="App">
                 <header className="App-header">
                     <Box component='grid' noValidate autoComplete="off" sx={{width: 400, flexDirection:'column', textAlign: 'left', justifyContent: 'left' }}>
-                      <Typography variant="h2" component="h2" style={{marginBottom: '15px'}}>Please enter your details below:</Typography>
+                      <Typography data-testid="dataShow" variant="h2" component="h2" style={{marginBottom: '15px'}}>Please enter your details below:</Typography>
                       <Box component='grid' padding='150' sx={{width: 400, flexDirection:'column', maxWidth: '100%'}}>
                         <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>First Name</Typography>
                         <TextField fullWidth id="textField1" variant="filled" sx={{input: {color: 'white'}}}/>

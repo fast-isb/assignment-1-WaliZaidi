@@ -3,11 +3,13 @@ import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 
 test('renders learn react link', () => {
-  <BrowserRouter>
+  // <BrowserRouter>
     render(<App />)
     const linkElement = screen.getByTestId("comp");
     expect(linkElement).toBeInTheDocument()
-  </BrowserRouter>
+  {/* </BrowserRouter> */}
 });
+
+
 
 //works as of now
