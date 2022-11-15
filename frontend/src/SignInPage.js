@@ -1,11 +1,12 @@
 import React from "react";
+import axios from 'axios';
 import Typography from '@material-ui/core/Typography'; //this is required for the better moving and typography of the page
 import { Box, ButtonGroup} from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'; //import for styles and themes
 import TextField from "@material-ui/core/TextField";
 import NavBar from "./navBar";
 import Button from "@material-ui/core/Button";
-import axios from 'axios';
+
 
 
 const theme = createTheme({ //this is how you create a theme, and then you can use it within the theme provider
