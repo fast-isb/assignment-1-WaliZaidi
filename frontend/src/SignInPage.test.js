@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-import SignUp from './SignUpPage'
+import SignIn from './SignInPage'
 
 test('renders learn react link', () => {
   // <BrowserRouter>
-    render(<SignUp />)
+    render(<SignIn />)
     const linkElement = screen.getByTestId("comp");
     expect(linkElement).toBeInTheDocument()
   {/* </BrowserRouter> */}
@@ -12,21 +12,19 @@ test('renders learn react link', () => {
 
 test('typography check for text', () => {
     // <BrowserRouter>
-      render(<SignUp />)
+      render(<SignIn />)
       const linkElement = screen.getByTestId("dataShow");
       expect(linkElement).toBeInTheDocument()
-      expect(linkElement).toHaveTextContent("Please enter your details below:")
+      expect(linkElement).toHaveTextContent("Welcome Back. Sign in!")
     {/* </BrowserRouter> */}
   });
 
 test('typography check for first name', () => {
     // <BrowserRouter>
-      render(<SignUp />)
-      const linkElement = screen.getByTestId("firstNameShow");
+      render(<SignIn />)
+      const linkElement = screen.getByTestId("passwordCheck");
       expect(linkElement).toBeInTheDocument()
-      expect(linkElement).toHaveTextContent("First Name")
+      expect(linkElement).toHaveTextContent("Password")
     {/* </BrowserRouter> */}
   });
-  
-  
   

@@ -29,7 +29,7 @@ function SignUp() {
                     <Box component='grid' noValidate autoComplete="off" sx={{width: 400, flexDirection:'column', textAlign: 'left', justifyContent: 'left' }}>
                       <Typography data-testid="dataShow" variant="h2" component="h2" style={{marginBottom: '15px'}}>Please enter your details below:</Typography>
                       <Box component='grid' padding='150' sx={{width: 400, flexDirection:'column', maxWidth: '100%'}}>
-                        <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>First Name</Typography>
+                        <Typography data-testid="firstNameShow" variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>First Name</Typography>
                         <TextField fullWidth id="textField1" variant="filled" sx={{input: {color: 'white'}}}/>
                         <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Last Name</Typography>
                         <TextField fullWidth id="textField2" variant="filled" />

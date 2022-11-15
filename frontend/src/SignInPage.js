@@ -84,7 +84,7 @@ class SignInPage extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}> {/*this is how you use the theme provider*/}
-        <div className="App">
+        <div data-testid="comp" className="App">
           <header className="App-header">
             {/*this is the main stuff that we need*/}
             <NavBar />
@@ -101,14 +101,14 @@ class SignInPage extends React.Component {
               }}>
                 
                 <div style={{marginTop:60}}>
-                  <Typography variant="h2" component="h2" style={{marginBottom: '15px'}}>Welcome Back. Sign in!</Typography>
+                  <Typography data-testid="dataShow" variant="h2" component="h2" style={{marginBottom: '15px'}}>Welcome Back. Sign in!</Typography>
                 </div>
                 <div style={{marginTop:100, direction: 'flex', flexDirection: 'column'}}>
                   <Typography variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Email</Typography>
                   <TextField id="outlined-basic" color="secondary" label="Email" variant="outlined" style={{marginBottom: '15px'}} />
                 </div>
                 <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
-                  <Typography variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Password</Typography>
+                  <Typography data-testid="passwordCheck" variant="h6" component="h6" align="center"  style={{marginBottom: '15px'}}>Password</Typography>
                   <TextField id="outlined" color="secondary" label="Password" type="password" variant="outlined" style={{marginBottom: '15px'}} />
                 </div>
                 <div style={{marginTop:30, direction: 'flex', flexDirection: 'column'}}>
