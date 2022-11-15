@@ -28,3 +28,11 @@ test('typography check for first name', () => {
     {/* </BrowserRouter> */}
   });
   
+  test('typography fail check for first name', () => {
+    // <BrowserRouter>
+      render(<SignIn />)
+      const linkElement = screen.getByTestId("passwordCheck");
+      expect(linkElement).toBeInTheDocument()
+      expect(linkElement).toHaveTextContent("Wheeeeeeeee")
+    {/* </BrowserRouter> */}
+  });

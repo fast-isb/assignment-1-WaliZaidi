@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-import SignUp from './SignUpPage'
+import UpdatePersonalInfo from './updatePersonalInfo'
 
 test('renders learn react link', () => {
   // <BrowserRouter>
-    render(<SignUp />)
+    render(<UpdatePersonalInfo />)
     const linkElement = screen.getByTestId("comp");
     expect(linkElement).toBeInTheDocument()
   {/* </BrowserRouter> */}
@@ -12,38 +12,37 @@ test('renders learn react link', () => {
 
 test('typography check for text', () => {
     // <BrowserRouter>
-      render(<SignUp />)
+      render(<UpdatePersonalInfo />)
       const linkElement = screen.getByTestId("dataShow");
-      expect(linkElement).toBeInTheDocument()
-      expect(linkElement).toHaveTextContent("Please enter your details below:")
-    {/* </BrowserRouter> */}
-  });
-
-test('typography check for first name', () => {
-    // <BrowserRouter>
-      render(<SignUp />)
-      const linkElement = screen.getByTestId("firstNameShow");
       expect(linkElement).toBeInTheDocument()
       expect(linkElement).toHaveTextContent("First Name")
     {/* </BrowserRouter> */}
   });
-  
-  test('typography fail check for text', () => {
+
+test('button check', () => {
     // <BrowserRouter>
-      render(<SignUp />)
+      render(<UpdatePersonalInfo />)
+      const linkElement = screen.getByTestId("buttonCheck");
+      expect(linkElement).toBeInTheDocument()
+      expect(linkElement).toHaveTextContent("Submit")
+    {/* </BrowserRouter> */}
+  });
+  
+  test('typography check for text', () => {
+    // <BrowserRouter>
+      render(<UpdatePersonalInfo />)
       const linkElement = screen.getByTestId("dataShow");
       expect(linkElement).toBeInTheDocument()
       expect(linkElement).toHaveTextContent("Wheeeeeeeee")
     {/* </BrowserRouter> */}
   });
 
-test('typography fail check for first name', () => {
+test('button check', () => {
     // <BrowserRouter>
-      render(<SignUp />)
-      const linkElement = screen.getByTestId("firstNameShow");
+      render(<UpdatePersonalInfo />)
+      const linkElement = screen.getByTestId("buttonCheck");
       expect(linkElement).toBeInTheDocument()
       expect(linkElement).toHaveTextContent("Meow")
     {/* </BrowserRouter> */}
-  });
-  
+  });  
   

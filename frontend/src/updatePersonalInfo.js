@@ -32,12 +32,12 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
 const updatePersonalInfo = () => {
     return(
         <ThemeProvider theme={theme}>
-            <div className="App">
+            <div data-testid="comp" className="App">
                 <header className="App-header">
                     <Box component='grid' noValidate autoComplete="off" sx={{width: 400, flexDirection:'column', textAlign: 'left', justifyContent: 'left' }}>
                         <Typography variant="h2" component="h2" style={{marginBottom: '15px'}}>Please enter your details below:</Typography>
                         <Box component='grid' padding='150' sx={{width: 400, flexDirection:'column', maxWidth: '100%'}}>
-                            <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>First Name</Typography>
+                            <Typography data-testid="dataShow" variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>First Name</Typography>
                             <TextField fullWidth id="textField1" variant="filled" sx={{input: {color: 'white'}}}/>
                             <Typography variant="subtitle1" component="h2" style={{marginTop: '3', textAlign: 'left'}}>Last Name</Typography>
                             <TextField fullWidth id="textField2" variant="filled" />
@@ -55,7 +55,7 @@ const updatePersonalInfo = () => {
                             <TextField fullWidth id="textField4"  variant="filled" />
                             <ButtonGroup variant="text" color="primary" aria-label="contained primary button group" style={{marginTop: '15px'}}>
                             <Button color="secondary" href="/main">Go Back</Button>
-                            <Button color="secondary" style={{marginTop: '3'}}>Submit</Button>
+                            <Button data-testid="buttonCheck" color="secondary" style={{marginTop: '3'}}>Submit</Button>
                             </ButtonGroup>
                         </Box>
                     </Box>

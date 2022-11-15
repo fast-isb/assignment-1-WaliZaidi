@@ -31,7 +31,7 @@ const theme = createTheme({ //this is how you create a theme, and then you can u
 const SubmissionPage = () => {
     return(
         <ThemeProvider theme={theme}>
-            <div className="App">
+            <div data-testid="comp" className="App">
                 <header className="App-header">
                     <Box component="container" display="flex" flexDirection="column" className="CenterBox" style={{
                     minHeight: '10vh',
@@ -42,7 +42,7 @@ const SubmissionPage = () => {
                     alignItems: 'center',
                     color: 'primary',
                     }}>
-                        <Typography className="welcomeHead" align="center" color="secondary" component="h2" style={{fontFamily: 'Rockwell', fontSize: 46, marginLeft: 0, zIndex: 1}}>
+                        <Typography data-testid="dataShow" className="welcomeHead" align="center" color="secondary" component="h2" style={{fontFamily: 'Rockwell', fontSize: 46, marginLeft: 0, zIndex: 1}}>
                             Welcome Back! Please choose one option from below
                         </Typography>
                     </Box>
@@ -50,7 +50,7 @@ const SubmissionPage = () => {
 
                     <Grid>
                         <Grid>
-                            <Button color="secondary" href="/userUpdate">Update User Information</Button>
+                            <Button data-testid="buttonCheck" color="secondary" href="/userUpdate">Update User Information</Button>
                         </Grid>
                     </Grid>
                     <ButtonGroup variant="text" color="primary" aria-label="contained primary button group" style={{marginTop: '15px'}}>

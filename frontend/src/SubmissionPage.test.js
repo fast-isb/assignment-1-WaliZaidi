@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-import SignUp from './SignUpPage'
+import SubmissionPage from './SubmissionPage'
 
 test('renders learn react link', () => {
   // <BrowserRouter>
-    render(<SignUp />)
+    render(<SubmissionPage />)
     const linkElement = screen.getByTestId("comp");
     expect(linkElement).toBeInTheDocument()
   {/* </BrowserRouter> */}
@@ -12,35 +12,35 @@ test('renders learn react link', () => {
 
 test('typography check for text', () => {
     // <BrowserRouter>
-      render(<SignUp />)
+      render(<SubmissionPage />)
       const linkElement = screen.getByTestId("dataShow");
       expect(linkElement).toBeInTheDocument()
-      expect(linkElement).toHaveTextContent("Please enter your details below:")
+      expect(linkElement).toHaveTextContent("Welcome Back! Please choose one option from below")
     {/* </BrowserRouter> */}
   });
 
-test('typography check for first name', () => {
+test('buttonCheck', () => {
     // <BrowserRouter>
-      render(<SignUp />)
-      const linkElement = screen.getByTestId("firstNameShow");
+      render(<SubmissionPage />)
+      const linkElement = screen.getByTestId("buttonCheck");
       expect(linkElement).toBeInTheDocument()
-      expect(linkElement).toHaveTextContent("First Name")
+      expect(linkElement).toHaveTextContent("Update User Information")
     {/* </BrowserRouter> */}
   });
   
   test('typography fail check for text', () => {
     // <BrowserRouter>
-      render(<SignUp />)
+      render(<SubmissionPage />)
       const linkElement = screen.getByTestId("dataShow");
       expect(linkElement).toBeInTheDocument()
       expect(linkElement).toHaveTextContent("Wheeeeeeeee")
     {/* </BrowserRouter> */}
   });
 
-test('typography fail check for first name', () => {
+test('buttonCheck fail', () => {
     // <BrowserRouter>
-      render(<SignUp />)
-      const linkElement = screen.getByTestId("firstNameShow");
+      render(<SubmissionPage />)
+      const linkElement = screen.getByTestId("buttonCheck");
       expect(linkElement).toBeInTheDocument()
       expect(linkElement).toHaveTextContent("Meow")
     {/* </BrowserRouter> */}
