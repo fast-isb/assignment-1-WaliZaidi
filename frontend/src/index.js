@@ -9,9 +9,9 @@ import { Router } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
       <App />
-    </BrowserRouter>
+    {/* </BrowserRouter> */} {/*un comment this for testing the thing*/}
   </React.StrictMode>,
   document.getElementById("root") //changed this for whatever reason, hopefully it works
 );
