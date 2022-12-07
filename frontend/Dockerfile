@@ -1,13 +1,13 @@
 FROM node:current-alpine
 
-WORKDIR /src/app
+WORKDIR /frontend/app
 
 COPY package*.json ./
 
-RUN npm install --force
+RUN npm i --force
 
 COPY . .
 
 EXPOSE 3000
 
-CMD {"node", "start"}
+CMD {"npm", "start"}
